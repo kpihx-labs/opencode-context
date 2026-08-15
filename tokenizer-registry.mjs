@@ -170,7 +170,7 @@ function similarity(a, b) {
 function levenshtein(a, b) {
   const aLen = a.length
   const bLen = b.length
-  const dp = Array.from({ length: aLen + 1 }, () => new Array(bLen + 1).fill(0))
+  const dp = Array.from({ length: aLen + 1 }, () => Array.from({ length: bLen + 1 }, () => 0))
   for (let i = 0; i <= aLen; i += 1) dp[i][0] = i
   for (let j = 0; j <= bLen; j += 1) dp[0][j] = j
   for (let i = 1; i <= aLen; i += 1) {

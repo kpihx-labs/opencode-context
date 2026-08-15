@@ -3,7 +3,6 @@ import { tool } from "@opencode-ai/plugin"
 import path from "path"
 import fs from "fs/promises"
 import { fileURLToPath, pathToFileURL } from "url"
-import { z } from "zod/v4"
 import type { TokenModel } from "./tokenizer-registry.mjs"
 import { resolveTokenModel, TokenizerResolutionError } from "./tokenizer-registry.mjs"
 
@@ -613,3 +612,5 @@ function capitalize(value: string): string {
   if (!value) return value
   return value[0].toUpperCase() + value.slice(1)
 }
+
+export default ContextUsagePlugin;
